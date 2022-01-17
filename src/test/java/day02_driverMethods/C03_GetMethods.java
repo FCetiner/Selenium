@@ -43,7 +43,7 @@ public class C03_GetMethods {
             System.out.println("PageSource testi PASSED");
         } else {
             System.out.println("PageSource Testi FAILED");
-            
+
         }
         //        10. Sayfayi kapatin.
         driver.close();
