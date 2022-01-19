@@ -1,4 +1,4 @@
-package selenium_homework_documents;
+package day00_selenium_homework_documents;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
