@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Q02_Navigate {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
 
         //        1-driver olusturalim
@@ -36,8 +36,14 @@ public class Q02_Navigate {
             System.out.println("Title test FAILED");
         }
         //        7-Sonrasinda https://github.com/ adresine geri donelim ve  sayfayi yenileyelim
-        driver.navigate().back();
-        driver.navigate().back();
+        Thread.sleep(2000);
+
+        //siteden kaynakli geri gitme bir seferde olmadigi icin boyle bir condition ile senaryo gerceklestirilebilir
+
+        while (driver.getCurrentUrl().equals("https://www.hepsiburada.com/")) {
+            driver.navigate().back();
+        }
+        Thread.sleep(2000);
         driver.navigate().refresh();
         //        8-Son adim olarak butun sayfalarimizi kapatmis ola
         driver.quit();
